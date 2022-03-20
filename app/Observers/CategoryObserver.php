@@ -25,6 +25,7 @@ class CategoryObserver extends BaseObserver
         if ($category->isDirty('name') && empty($category->slug)) {
             $category->slug = generate_english_slug($category->name);
         }
+        return true;
     }
 
     /**

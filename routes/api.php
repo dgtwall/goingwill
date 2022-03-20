@@ -38,6 +38,10 @@ Route::middleware('auth:api')->group(function () {
     Route::patch('articles/{article}/restore', \App\Http\Controllers\Resources\ArticleController::class . '@restore')->name('articles.restore');
     Route::delete('articles/{article}/forceDelete', \App\Http\Controllers\Resources\ArticleController::class . '@forceDelete')->name('articles.forceDelete');
 
+    Route::apiResource('books', \App\Http\Controllers\Resources\BookController::class);
+    Route::patch('books/{book}/restore', \App\Http\Controllers\Resources\BookController::class . '@restore')->name('articles.restore');
+    Route::delete('books/{book}/forceDelete', \App\Http\Controllers\Resources\BookController::class . '@forceDelete')->name('articles.forceDelete');
+
     Route::post('articleImages', \App\Http\Controllers\Resources\ArticleImageController::class . '@store')->name('articleImages.store');
 
     Route::get('comments', \App\Http\Controllers\Resources\CommentController::class . '@index')->name('comments.index');

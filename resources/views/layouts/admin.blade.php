@@ -39,6 +39,12 @@
                                     </ul>
                                 </li>
                                 <li>
+                                    <a><i class="fa fa-book"></i> {{ translate('Book') }} <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="{{ url('admin/book/index') }}">{{ translate('List') }}</a></li>
+                                    </ul>
+                                </li>
+                                <li>
                                     <a><i class="fa fa-th"></i> {{ translate('Category & Nav') }} <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
                                         <li><a href="{{ url('admin/category/index') }}">{{ translate('Category') }}</a></li>

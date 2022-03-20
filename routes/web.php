@@ -9,6 +9,11 @@ Route::name('home.')->group(function () {
         Route::get('article/{article}/{slug?}', \App\Http\Controllers\Home\ArticleController::class . '@show')->name('show');
         Route::get('search', \App\Http\Controllers\Home\ArticleController::class . '@search')->name('search');
     });
+    Route::name('book.')->group(function () {
+        Route::get('/book', \App\Http\Controllers\Home\BookController::class . '@index')->name('index');
+        Route::get('book/{book}', \App\Http\Controllers\Home\BookController::class . '@show')->name('show');
+        Route::get('search', \App\Http\Controllers\Home\BookController::class . '@search')->name('search');
+    });
     Route::get('category/{category}/{slug?}', \App\Http\Controllers\Home\CategoryController::class . '@show')->name('category.show');
     Route::get('tag/{tag}/{slug?}', \App\Http\Controllers\Home\TagController::class . '@show')->name('tag.show');
     Route::get('note', \App\Http\Controllers\Home\NoteController::class . '@index')->name('note.index');
@@ -91,6 +96,23 @@ Route::prefix('admin')->middleware('auth:admin')->group(function () {
         Route::get('replaceView', \App\Http\Controllers\Admin\ArticleController::class . '@replaceView');
         // 批量替换功能
         Route::post('replace', \App\Http\Controllers\Admin\ArticleController::class . '@replace');
+    });
+    // 书籍管理
+    Route::prefix('book')->group(function () {
+        // 书籍列表
+        Route::get('index', \App\Http\Controllers\Admin\BookController::class . '@index');
+        // 发布书籍
+        Route::get('create', \App\Http\Controllers\Admin\BookController::class . '@create');
+        Route::post('store', \App\Http\Controllers\Admin\BookController::class . '@store');
+        // 编辑书籍
+        Route::get('edit/{id}', \App\Http\Controllers\Admin\BookController::class . '@edit');
+        Route::post('update/{id}', \App\Http\Controllers\Admin\BookController::class . '@update');
+        // 删除书籍
+        Route::get('destroy/{id}', \App\Http\Controllers\Admin\BookController::class . '@destroy');
+        // 恢复删除的书籍
+        Route::get('restore/{id}', \App\Http\Controllers\Admin\BookController::class . '@restore');
+        // 彻底删除书籍
+        Route::get('forceDelete/{id}', \App\Http\Controllers\Admin\BookController::class . '@forceDelete');
     });
 
     // 分类管理

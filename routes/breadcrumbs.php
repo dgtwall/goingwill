@@ -5,6 +5,7 @@ declare(strict_types=1);
 use App\Models\Article;
 use App\Models\Category;
 use App\Models\Tag;
+use App\Models\Book;
 use DaveJamesMiller\Breadcrumbs\BreadcrumbsGenerator;
 
 Breadcrumbs::for('home.article.index', function (BreadcrumbsGenerator $trail) {
@@ -24,6 +25,16 @@ Breadcrumbs::for('home.tag.show', function (BreadcrumbsGenerator $trail, Tag $ta
 Breadcrumbs::for('home.note.index', function (BreadcrumbsGenerator $trail) {
     $trail->parent('home.article.index');
     $trail->push(translate('Note'), route('home.note.index'));
+});
+
+Breadcrumbs::for('home.book.index', function (BreadcrumbsGenerator $trail) {
+    $trail->parent('home.article.index');
+    $trail->push(translate('Book'), route('home.book.index'));
+});
+
+Breadcrumbs::for('home.book.show', function (BreadcrumbsGenerator $trail, Book $book) {
+    $trail->parent('home.book.index');
+    $trail->push($book->title, route('home.tag.show', $book->id));
 });
 
 Breadcrumbs::for('home.chat.index', function (BreadcrumbsGenerator $trail) {
