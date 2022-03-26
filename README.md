@@ -21,7 +21,7 @@ Welcome to submit a PR or tell me to include your blog
 
 ## Links
 - Blog：[https://goingwill.xyz](https://goingwill.xyz)   
-- GitHub：[https://https://github.com/dgtwall/goingwill](https://https://github.com/dgtwall/goingwill)   
+- GitHub：[https://github.com/dgtwall/goingwill](https://github.com/dgtwall/goingwill)   
 
 ## License
 laravel-gwblog is open-sourced software licensed under the MIT license.
