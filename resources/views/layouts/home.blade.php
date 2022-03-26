@@ -178,12 +178,9 @@
 
             <dl class="col-xs-12 col-sm-6 col-md-{{ $homeFootColNumber }} col-lg-{{ $homeFootColNumber }}">
                 <dt>{{ translate('Structure') }}</dt>
-                <dd>{{ translate('Project Name') }}：<a rel="nofollow" href="https://github.com/baijunyao/laravel-bjyblog" target="{{ config('bjyblog.link_target') }}">laravel-bjyblog</a></dd>
-                <dd>{{ translate('Blog Version') }}：<a rel="nofollow" href="https://github.com/baijunyao/laravel-bjyblog" target="{{ config('bjyblog.link_target') }}">{{ config('bjyblog.version') }}-{{ config('bjyblog.branch') }}</a></dd>
+                <dd>{{ translate('Project Name') }}：<a rel="nofollow" href="https://github.com/dgtwall/goingwill" target="{{ config('bjyblog.link_target') }}">laravel-GW</a></dd>
+                <dd>{{ translate('Blog Version') }}：<a rel="nofollow" href="https://github.com/dgtwall/goingwill" target="{{ config('bjyblog.link_target') }}">{{ config('bjyblog.version') }}-{{ config('bjyblog.branch') }}</a></dd>
                 <dd>{{ translate('Framework Version') }}：<a rel="nofollow"  href="https://github.com/laravel/framework" target="{{ config('bjyblog.link_target') }}">laravel-v{{ \Illuminate\Foundation\Application::VERSION }}</a></dd>
-                <dd>{{ translate('Project Author') }}：<a href="https://baijunyao.com">{{ translate('Junyao Bai') }}</a></dd>
-                <dd>{{ translate('Theme Name') }}：<a rel="nofollow" href="https://github.com/baijunyao/blog-theme-blueberry">blog-theme-blueberry</a></dd>
-                <dd>{{ translate('Theme Author') }}：<a href="https://baijunyao.com">{{ translate('Junyao Bai') }}</a></dd>
             </dl>
 
             <dl class="col-xs-12 col-sm-6 col-md-{{ $homeFootColNumber }} col-lg-{{ $homeFootColNumber }}">
