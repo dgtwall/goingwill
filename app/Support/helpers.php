@@ -58,6 +58,9 @@ if (!function_exists('generate_english_slug')) {
      */
     function generate_english_slug($content)
     {
+        //暂时去除slug翻译
+        return '';
+        /*
         $locale = config('app.locale');
 
         if ('en' !== $locale) {
@@ -68,6 +71,7 @@ if (!function_exists('generate_english_slug')) {
         }
 
         return Str::slug($content ?? '');
+        */
     }
 }
 
